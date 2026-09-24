@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uzayı Anla</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- HEADER -->
+    <header class="topbar">
+      <a class="back-link" href="../index.html" data-testid="back-link">
+        <span class="arrow">&larr;</span> ANA SAYFAYA DÖN
+      </a>
+
+      <nav class="chapters" id="chapters" data-testid="chapter-nav"></nav>
+
+      <div class="topbar-right" aria-hidden="true"></div>
+    </header>
+
+    <!-- SCENE -->
+    <main class="scene" id="scene">
+      <div class="scene-info" id="scene-info" data-testid="scene-info"></div>
+      <div class="scene-stage" id="scene-stage" data-testid="scene-stage"></div>
+    </main>
+
+    <!-- BOTTOM NAV -->
+    <footer class="bottombar">
+      <button class="btn-outline" id="btn-index" data-testid="open-index">KONULAR</button>
+
+      <div class="progress" data-testid="progress">
+        <span class="progress-count" id="progress-count">01 / 21</span>
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      </div>
+
+      <div class="nav-controls">
+        <button class="btn-ghost" id="btn-prev" data-testid="prev-topic"><span class="arrow">&larr;</span> ÖNCEKİ</button>
+        <button class="btn-next" id="btn-next" data-testid="next-topic">SONRAKİ <span class="arrow">&rarr;</span></button>
+      </div>
+    </footer>
+
+    <!-- TOPIC INDEX OVERLAY -->
+    <div class="overlay" id="overlay" data-testid="topic-index" hidden>
+      <div class="overlay-panel">
+        <button class="overlay-close" id="overlay-close" data-testid="close-index" aria-label="Kapat">&times;</button>
+        <div class="overlay-head">
+          <h2>İÇİNDEKİLER</h2>
+          <p>Uzayı Anla</p>
+        </div>
+        <div class="overlay-list" id="overlay-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Güneş Sistemi — Etkileşimli 3B Sahne</title>
+    <meta
+      name="description"
+      content="Etkileşimli 3B Güneş Sistemi: gezegenleri seçin, verilerini okuyun, ayrıntılı keşif modüllerine geçin."
+    />
+    <script>
+      if (new URLSearchParams(window.location.search).get("embed") === "landing") {
+        document.documentElement.dataset.embed = "landing";
+      }
+    </script>
+    <link rel="stylesheet" href="./css/solar-system.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.185.1/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="stage">
+      <aside class="panel" aria-label="Bilgi paneli">
+        <div class="panel__top">
+          <a class="panel__brand" href="./index.html" data-testid="home-link">Güneş Sistemi'ni Keşfet</a>
+          <button
+            type="button"
+            id="panel-reset"
+            class="btn btn--quiet"
+            data-testid="panel-reset-button"
+          >
+            Genel
+          </button>
+        </div>
+
+        <div class="panel__scroll">
+          <div id="panel-body" data-testid="panel-body"></div>
+        </div>
+
+        <nav class="index" aria-label="Gök cisimleri">
+          <p class="kicker index__kicker">Gök Cisimleri</p>
+          <div id="body-index" class="index__list"></div>
+        </nav>
+
+        <div class="panel__foot">
+          <span class="kicker">Modül 02</span>
+          <a class="btn btn--quiet" href="./uzayi-anla/index.html" data-testid="space101-link">Uzayı Anla</a>
+        </div>
+      </aside>
+
+      <div class="viewport">
+        <canvas id="scene" data-testid="scene-canvas"></canvas>
+        <div id="labels"></div>
+
+        <div class="chrome chrome--top">
+          <span class="legend"><b>Sürükle</b> döndür &nbsp;·&nbsp; <b>Tekerlek</b> yakınlaş</span>
+        </div>
+
+        <div class="chrome chrome--bottom">
+          <p class="note" id="scale-note" hidden>
+            Yörünge yarıçapları gerçek yarı-büyük eksen değerlerinden (AB) türetilmiştir;
+            a<sup>0,58</sup> ile sıkıştırılmıştır. Sıra ve iç/dış mesafe farkı korunur —
+            görselleştirme ölçekli değildir.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./js/i18n.js"></script>
+    <script type="module" src="./js/solar-system.js"></script>
+  </body>
+</html>
