@@ -11,8 +11,6 @@ Güneş Sistemi'ni etkileşimli üç boyutlu sahneler ve bilimsel bilgilerle ke�
 - Güneş araçları için yörünge ve görev bilgileri
 - Kraterler, gezegen yüzeyleri ve halka bölgeleri için etkileşimli inceleme modları
 - Temel astronomi konularını anlatan **Uzayı Anla** modülü
-- Türkçe ve İngilizce arayüz
-- Masaüstü ve mobil ekranlara uyumlu tasarım
 
 ## Kullanılan Teknolojiler
 
